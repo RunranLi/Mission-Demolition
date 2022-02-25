@@ -42,7 +42,7 @@ public class Slingshot : MonoBehaviour
         // Start it at the launchPoint
         projectile.transform.position = launchPos;
         // Set it to isKinematic for now
-//        projectile.rigidbody.isKinematic = true;
+        projectile.rigidbody.isKinematic = true;
     }
     // Update is called once per frame
     void Update()
@@ -70,8 +70,8 @@ public class Slingshot : MonoBehaviour
         {
             // The mouse has been released
             aimingMode = false;
-//            projectile.rigidbody.isKinematic = false;
-//            projectile.rigidbody.velocity = -mouseDelta * velocityMult;
+            projectile.rigidbody.isKinematic = false;
+            projectile.rigidbody.velocity = -mouseDelta * velocityMult;
             FollowCam.S.poi = projectile;
             projectile = null;
             MissionDemolition.ShotFired();
