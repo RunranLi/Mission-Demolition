@@ -33,7 +33,7 @@ public class FollowCam : MonoBehaviour
             if (poi.tag == "Projectile")
             {
                 // if it is sleeping (that is, not moving)
- //               if (poi.rigidbody.IsSleeping())
+               if (poi.rigidbody.IsSleeping())
                 {
                     // return to default view
                     poi = null;
@@ -52,7 +52,7 @@ public class FollowCam : MonoBehaviour
         // Set the camera to the destination
         transform.position = destination;
         // Set the orthographicSize of the Camera to keep Ground in view
-//        this.camera.orthographicSize = destination.y + 10;
+        this.camera.orthographicSize = destination.y + 10;
     }
 
 }
