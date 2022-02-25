@@ -120,7 +120,7 @@ public class ProjectileLine : MonoBehaviour
         }
         // If there is a poi, it's loc is added every FixedUpdate
         AddPoint();
-//        if (poi.rigidbody.IsSleeping())
+        if (poi.rigidbody.IsSleeping())
         {
             // Once the poi is sleeping, it is cleared
             poi = null;
